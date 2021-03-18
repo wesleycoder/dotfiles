@@ -1,0 +1,32 @@
+- defaults:
+  link:
+    relink: true
+
+- clean: ['~']
+
+- create:
+  - ~/.zsh
+
+- git:
+  ~/.zgen:
+    url: https://github.com/tarjoilija/zgen.git
+    description: Cloning zgen
+
+- shell:
+  - 
+    command: git submodule update --init --recursive
+    description: Installing submodules
+    quiet: true
+
+- link:
+  ~/.dotfiles: ""
+  ~/.gitconfig: common/.gitconfig
+  ~/.zshrc:
+    force: true
+    path: common/zsh/.zshrc
+  ~/.zsh/:
+    if: '[ `uname` = Linux ]'
+    path: linux/zsh
+  ~/.zsh/:
+    if: '[ `uname` = Darwin ]'
+    path: macos/zsh

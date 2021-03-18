@@ -1,3 +1,5 @@
+export ZSH_THEME="spaceship"
+
 source "${HOME}/.zgen/zgen.zsh"
 
 for file in ~/.zsh/*.zshrc; do

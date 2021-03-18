@@ -6,11 +6,15 @@
 
 - create:
   - ~/.zsh
+  - ~/.oh-my-zsh/custom/themes
 
 - git:
   ~/.zgen:
     url: https://github.com/tarjoilija/zgen.git
     description: Cloning zgen
+  ~/.oh-my-zsh/custom/themes/spaceship-prompt:
+    url: https://github.com/denysdovhan/spaceship-prompt.git
+    description: Cloning spaceship-prompt
 
 - shell:
   - 
@@ -30,3 +34,4 @@
   ~/.zsh/:
     if: '[ `uname` = Darwin ]'
     path: macos/zsh
+  ~/.oh-my-zsh/custom/themes/spaceship.zsh-theme: .oh-my-zsh/custom/themes/spaceship-prompt/spaceship.zsh-theme

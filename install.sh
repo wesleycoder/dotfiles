@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+echo '=== DOTFILES IS RUNNING ==='
+
 set -e
 
 CONFIG="install.conf.yaml"

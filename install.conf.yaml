@@ -1,20 +1,9 @@
 - defaults:
     link:
+      create: true
       relink: true
 
 - clean: ['~']
-
-- create:
-  - ~/.zsh
-  - ~/.oh-my-zsh/custom/themes
-
-- git:
-    ~/.zgen:
-      url: https://github.com/tarjoilija/zgen.git
-      description: Cloning zgen
-    ~/.oh-my-zsh/custom/themes/spaceship-prompt:
-      url: https://github.com/denysdovhan/spaceship-prompt.git
-      description: Cloning spaceship-prompt
 
 - shell:
   - 
@@ -33,4 +22,12 @@
     ~/.zsh:
       force: true
       path: common/zsh
-    ~/.oh-my-zsh/custom/themes/spaceship.zsh-theme: ~/.oh-my-zsh/custom/themes/spaceship-prompt/spaceship.zsh-theme
+    ~/.zgen:
+      force: true
+      path: zsh-plugins/zgen
+    ~/.oh-my-zsh/custom/themes/spaceship-prompt:
+      force: true
+      path: zsh-plugins/spaceship-prompt
+    ~/.oh-my-zsh/custom/themes/spaceship.zsh-theme:
+      force: true
+      path: zsh-plugins/spaceship-prompt/spaceship.zsh-theme

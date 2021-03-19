@@ -12,6 +12,7 @@
     quiet: true
 
 - link:
+    ~/.profile: "common/.profile"
     ~/.dotfiles: "."
     ~/.gitconfig:
       force: true

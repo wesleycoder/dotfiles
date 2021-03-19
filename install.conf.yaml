@@ -23,15 +23,14 @@
     quiet: true
 
 - link:
-    ~/.dotfiles: ""
-    ~/.gitconfig: common/git/.gitconfig
+    ~/.dotfiles: "."
+    ~/.gitconfig:
+      force: true
+      path: common/git/.gitconfig
     ~/.zshrc:
       force: true
       path: common/zsh/.zshrc
-    ~/.zsh/:
-      if: '[ `uname` = Linux ]'
-      path: linux/zsh
-    ~/.zsh/:
-      if: '[ `uname` = Darwin ]'
-      path: macos/zsh
+    ~/.zsh:
+      force: true
+      path: common/zsh
     ~/.oh-my-zsh/custom/themes/spaceship.zsh-theme: ~/.oh-my-zsh/custom/themes/spaceship-prompt/spaceship.zsh-theme

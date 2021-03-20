@@ -12,17 +12,17 @@
     quiet: true
 
 - link:
-    ~/.profile: "common/.profile"
+    ~/.profile: ".profile"
     ~/.dotfiles: "."
     ~/.gitconfig:
       force: true
-      path: common/git/.gitconfig
+      path: git/.gitconfig
     ~/.zshrc:
       force: true
-      path: common/zsh/.zshrc
+      path: zsh/.zshrc
     ~/.zsh:
       force: true
-      path: common/zsh
+      path: zsh
     ~/.zgen:
       force: true
       path: zsh-plugins/zgen

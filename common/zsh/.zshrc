@@ -1,3 +1,4 @@
+export ZSH_CUSTOM="$HOME/.oh-my-zsh/custom"
 export ZSH_THEME="spaceship"
 
 source "${HOME}/.zgen/zgen.zsh"

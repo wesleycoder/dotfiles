@@ -19,7 +19,7 @@
       path: git/.gitconfig
     ~/.zshrc:
       force: true
-      path: zsh/.zshrc
+      path: ./.zshrc
     ~/.zsh:
       force: true
       path: zsh

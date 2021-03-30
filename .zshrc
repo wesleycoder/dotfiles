@@ -4,25 +4,26 @@ export ZSH_THEME="spaceship"
 source "${HOME}/.zgen/zgen.zsh"
 
 loadZshFiles () {
-  local ZSH_FILES_FOLDER=''
+  local ZSH_PLATFORM=''
+
+  for filename in ~/.zsh/common/*.sh; do
+    source $filename
+  done
 
   if [ `uname` = Linux ]; then
-    ZSH_FILES_FOLDER=linux
-  elif [ `uname` = Linux ]; then
-    ZSH_FILES_FOLDER=macos
+    ZSH_PLATFORM=linux
+  elif [ `uname` = Darwin ]; then
+    ZSH_PLATFORM=macos
   else
-    ZSH_FILES_FOLDER=windows
+    ZSH_PLATFORM=windows
   fi
   
-  for filename in ~/.zsh/$ZSH_FILES_FOLDER/*.sh; do
+  for filename in ~/.zsh/$ZSH_PLATFORM/*.sh; do
     source $filename
   done
 }
 
 loadZshFiles
-
-source ./zgen.sh
-source ./deno.sh
 
 if [ -f ~/.zshrc_local ]; then
   source ~/.zshrc_local

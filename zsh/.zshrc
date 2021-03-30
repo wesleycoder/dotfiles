@@ -14,7 +14,7 @@ loadZshFiles () {
     ZSH_FILES_FOLDER=windows
   fi
   
-  for filename in ~/.zsh/$ZSH_FILES_FOLDER/*.zshrc; do
+  for filename in ~/.zsh/$ZSH_FILES_FOLDER/*.sh; do
     source $filename
   done
 }
@@ -22,6 +22,7 @@ loadZshFiles () {
 loadZshFiles
 
 source ./zgen.sh
+source ./deno.sh
 
 if [ -f ~/.zshrc_local ]; then
   source ~/.zshrc_local
